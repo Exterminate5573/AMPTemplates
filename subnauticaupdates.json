@@ -1,4 +1,15 @@
 [
+
+    {
+        "UpdateStageName": "Subnautica Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "264710",
+        "UpdateSourceArgs": "264710",
+        "ForceDownloadPlatform": "Windows",
+        "UpdateSourceVersion": "",
+        "SkipOnFailure": false
+    },
     {
         "UpdateStageName": "Nitrox Directory Creation",
         "UpdateSourcePlatform": "All",
