@@ -1,34 +1,41 @@
 [
     {
-        "UpdateStageName": "Subnautica",
+        "UpdateStageName": "Nitrox Directory Creation",
         "UpdateSourcePlatform": "All",
-        "UpdateSource": "SteamCMD",
-        "UpdateSourceArgs": "264710",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
-        "DeleteAfterExtract": true,
-        "OneShot": true
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}nitrox",
+        "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Nitrox",
+        "UpdateStageName": "Nitrox Download",
         "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "GithubRelease",
-        "UpdateSourceData": "Nitrox_1.8.0.1_linux_x64.zip",
-        "UpdateSourceArgs": "SubnauticaNitrox/Nitrox",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://github.com/SubnauticaNitrox/Nitrox/releases/download/1.8.0.1/Nitrox_1.8.0.1_linux_x64.zip",
+        "UpdateSourceTarget": "{{$FullBaseDir}}nitrox",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
-        "OneShot": false
+        "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Nitrox",
+        "UpdateStageName": "Nitrox Download",
         "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "GithubRelease",
-        "UpdateSourceData": "Nitrox_1.8.0.1_win_x64.zip",
-        "UpdateSourceArgs": "SubnauticaNitrox/Nitrox",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://github.com/SubnauticaNitrox/Nitrox/releases/download/1.8.0.1/Nitrox_1.8.0.1_win_x64.zip",
+        "UpdateSourceTarget": "{{$FullBaseDir}}nitrox",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
-        "OneShot": false
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Server.cfg File Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/subnautica-legacyserver.cfg",
+        "UpdateSourceArgs": "server.cfg",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
     }
 ]
