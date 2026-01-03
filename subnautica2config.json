@@ -459,5 +459,20 @@
         "DefaultValue": "",
         "Placeholder": "9.0.9",
         "EnumValues": {}
+    },
+    {
+        "DisplayName": "Disable Nitrox Download",
+        "Category": "Updates",
+        "Subcategory": "Server Updates:build:-1",
+        "Description": "If set, AMP will not download the Nitrox files when the server is updated. The relevant client files will need to be installed manually in the 'Nitrox' directory in the instance's base directory.",
+        "Keywords": "client,files,download,nitrox",
+        "FieldName": "DisableNitroxDownload",
+        "InputType": "checkbox",
+        "ParamFieldName": "DisableNitroxDownload",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
     }
 ]
