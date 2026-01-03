@@ -65,6 +65,8 @@
         "UpdateSourceData": "https://api.github.com/repos/SubnauticaNitrox/Nitrox/releases/latest",
         "UpdateSourceArgs": "$.assets[1].browser_download_url",
         "UpdateSourceTarget": "{{$FullBaseDir}}Nitrox",
+        "UpdateSourceConditionSetting": "DisableNitroxDownload",
+        "UpdateSourceConditionValue": "false",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
@@ -78,6 +80,8 @@
         "UpdateSourceData": "https://api.github.com/repos/SubnauticaNitrox/Nitrox/releases/latest",
         "UpdateSourceArgs": "$.assets[0].browser_download_url",
         "UpdateSourceTarget": "{{$FullBaseDir}}Nitrox",
+        "UpdateSourceConditionSetting": "DisableNitroxDownload",
+        "UpdateSourceConditionValue": "false",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
@@ -90,6 +94,8 @@
         "UpdateSourceData": "https://api.github.com/repos/SubnauticaNitrox/Nitrox/releases/latest",
         "UpdateSourceArgs": "$.assets[2].browser_download_url",
         "UpdateSourceTarget": "{{$FullBaseDir}}Nitrox",
+        "UpdateSourceConditionSetting": "DisableNitroxDownload",
+        "UpdateSourceConditionValue": "false",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
@@ -102,6 +108,8 @@
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
         "UpdateSourceArgs": "-c \"cd subnautica/264710/Nitrox && \\cp -rf linux-x64/* ./ >/dev/null 2>&1; rm -rf linux-x64 >/dev/null 2>&1; chmod +x NitroxServer-Subnautica\"",
+        "UpdateSourceConditionSetting": "DisableNitroxDownload",
+        "UpdateSourceConditionValue": "false",
         "SkipOnFailure": false
     },
     {
@@ -111,6 +119,8 @@
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
         "UpdateSourceArgs": "-c \"cd subnautica/264710/Nitrox && \\cp -rf linux-arm64/* ./ >/dev/null 2>&1; rm -rf linux-arm64 >/dev/null 2>&1; chmod +x NitroxServer-Subnautica\"",
+        "UpdateSourceConditionSetting": "DisableNitroxDownload",
+        "UpdateSourceConditionValue": "false",
         "SkipOnFailure": false
     },
     {
@@ -119,6 +129,8 @@
         "UpdateSource": "Executable",
         "UpdateSourceData": "powershell.exe",
         "UpdateSourceArgs": "-NoProfile -Command \"Set-Location -Path 'subnautica/264710/Nitrox'; Copy-Item -Path 'win-x64/*' -Destination './' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null; Remove-Item -Path 'win-x64' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null\"",
+        "UpdateSourceConditionSetting": "DisableNitroxDownload",
+        "UpdateSourceConditionValue": "false",
         "SkipOnFailure": false
     },
     {
